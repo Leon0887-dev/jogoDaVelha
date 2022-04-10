@@ -21,6 +21,13 @@
             <li> centralizar a informação qual é o jogador da vez 
             <li> centralizar quem é o vencedor 
             <li> setar o tamanho do botão e centralizar 
+            <li> cores: 
+                <ol>
+                    <li> fundo #03021F
+                    <li>quadrado    #020036
+                    <li> X #F2D338 
+                    <li> O #57CBE6
+                </ol>
         </ol>                   
 
 </ul>
