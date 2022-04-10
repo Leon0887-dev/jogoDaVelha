@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body{
+    background-color: #060515;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    color: #ccc;
+    height: 100vh;
+    
+}
+
+header h1{
+    text-align: center;
+    color: #ccc;
+    font-size: 2.5em;
+    margin: 30px 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-jogo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.qd-velha{
+    width: 150px;
+    height: 150px;
+    background-color:  #0b0a24e8;
+    margin: 0 10px 10px 0;
+    cursor: pointer;
+}
+
+.vez-jogar, .vencedor, .btn{
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.btn button{
+    padding: 5px;
+    font-size: 1.2em;
+    width: 100px;
+    background-color: #ad9417;
+    font-weight: bold;
+    color: #0b0a24e8 ;
+    cursor: pointer;
+}
