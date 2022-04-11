@@ -28,6 +28,14 @@
                     <li> X #F2D338 
                     <li> O #57CBE6
                 </ol>
-        </ol>                   
+        </ol> 
+    <li> JSS 
+        <ol>
+            <li>pegar o enveto do click 
+            <li> sempre que clicar no qd-quadrado inserir o X ou O , de acordo com o jogador , se for o jogador x deve inserir o x etc. 
+            <li> criar um variável jogador com o valor null ou vazia, essa variável vai guardar a informação de qual é o jogador da vez   
+            <li> quando clicar em qd-quadrado , vamo pegar o jogador e inserir no qd-quadrado (x ou o), colocar cor no texto e mudar o jogador , mudar o texto tbm do vez-jogar . 
+            <li>
+        </ol>                  
 
 </ul>
