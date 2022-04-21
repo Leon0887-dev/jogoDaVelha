@@ -12,20 +12,19 @@ function clickQuadrados (e){
     let clicandoQuadrado = e.target  
     clicandoQuadrado.innerHTML = jogador;
     clicandoQuadrado.style.color = '#F2D338';
-    let qualEVez = jogador === 'X' ? 'O' : 'X'; 
-    mudarJogador(qualEVez);
-    checaJogador()
+    let vencedor = checaVencedor(jogador); 
+    mudarJogador(jogador); 
 }
 
 function mudarJogador(valor){
-    jogador = valor
+    jogador = valor === 'X' ? 'O' : 'X';
     jogadorSelecionado.innerHTML = 'jogador: ' + jogador;
 }
 
-function checaJogador(jogadorVencedor){
-    return combinacoesVitorias.some(combinacao =>{
-
+function checaVencedor(jogadorVencedor){
+    let checando = combinacoesVitorias.some(combinacoes =>{
+        return combinacoes.every( index =>{
+            return quadradosVelha[index].innerHTML === jogadorVencedor ;
+        })
     })
-
-    
 }
