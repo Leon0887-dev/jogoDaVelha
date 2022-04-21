@@ -10,7 +10,7 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 18px;
     color: #ccc;
-    height: 100vh;
+    height: 100%;
     
 }
 
@@ -49,10 +49,33 @@ main{
     font-size: 1.2em;
 }
 
+.vencedor{
+    height: calc(100% - 10px);
+    background-color: rgba(7, 7, 7, 0.544);
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info-resultado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.resultado{
+    font-size: 2em;
+    margin-bottom: 50px;
+    color: #ad9417;
+}
+
 .btn button{
     padding: 5px;
-    font-size: 1.2em;
-    width: 100px;
+    font-size: 1.1em;
+    width: 150px;
     background-color: #ad9417;
     font-weight: bold;
     color: #0b0a24e8 ;
