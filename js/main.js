@@ -30,14 +30,14 @@ function checaEmpate(){
     return[...quadradosVelha].every(index => index.classList.contains('preencheu'))
 }
 
-function fimDeJogo(empate,jogadorDaVez){
-    console.log(jogadorDaVez);
+function fimDeJogo(empate){
+    
     if(empate){
         VENCEDOR.style.display = "flex";
         RESULTADO.innerHTML = "Empate!!"
     }else{
         VENCEDOR.style.display = "flex";
-        jogadorDaVez === 'X' ? RESULTADO.innerHTML = "O venceu!!" : RESULTADO.innerHTML = "X venceu!!"
+        jogador === 'X' ? RESULTADO.innerHTML = "X venceu!!" : RESULTADO.innerHTML = "O venceu!!"
     }
 }
 
@@ -47,11 +47,12 @@ function clickQuadrados (e){
     clicandoQuadrado.classList.add("preencheu");
     clicandoQuadrado.innerHTML = jogador;
     clicandoQuadrado.style.color = '#F2D338';
+    //let jogadorMomento = jogador 
     let vencedor = checaVencedor(jogador); 
     let empate = checaEmpate()
 
     if(vencedor){
-        fimDeJogo(false, jogador);
+        fimDeJogo(false);
     }else if (empate){
         fimDeJogo(true);
     }
