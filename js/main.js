@@ -15,6 +15,7 @@ const REINICAR = document.querySelector('.btn button');
     quadrado.addEventListener('click',clickQuadrados,{once: true}  );
 })
     VENCEDOR.style.display = "none";
+    jogadorSelecionado.innerHTML = "jogador: ";
     jogador = "X"
  }
 
