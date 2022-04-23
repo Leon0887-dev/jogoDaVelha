@@ -6,11 +6,17 @@ const combinacoesVitorias = [[0,1,2],[3,4,5],[6,7,8],[0,3,6], [1,4,7], [2,5,8], 
 
 const VENCEDOR = document.querySelector(".vencedor");
 const RESULTADO = document.querySelector('.resultado p');
+const REINICAR = document.querySelector('.btn button');
 
-quadradosVelha.forEach(quadrado => {
+ const iniciaJogo = () => {quadradosVelha.forEach(quadrado => {
+    quadrado.innerHTML = '';
+    quadrado.classList.remove("preencheu");
+    quadrado.removeEventListener('click', clickQuadrados);
     quadrado.addEventListener('click',clickQuadrados,{once: true}  );
 })
-
+    VENCEDOR.style.display = "none";
+    jogador = "X"
+ }
 
 
 function mudarJogador(valor){
@@ -31,7 +37,7 @@ function checaEmpate(){
 }
 
 function fimDeJogo(empate){
-    
+
     if(empate){
         VENCEDOR.style.display = "flex";
         RESULTADO.innerHTML = "Empate!!"
@@ -46,8 +52,7 @@ function clickQuadrados (e){
     let clicandoQuadrado = e.target  
     clicandoQuadrado.classList.add("preencheu");
     clicandoQuadrado.innerHTML = jogador;
-    clicandoQuadrado.style.color = '#F2D338';
-    //let jogadorMomento = jogador 
+    clicandoQuadrado.style.color = '#F2D338'; 
     let vencedor = checaVencedor(jogador); 
     let empate = checaEmpate()
 
@@ -58,3 +63,7 @@ function clickQuadrados (e){
     }
     mudarJogador(jogador); 
 }
+
+iniciaJogo();
+
+REINICAR.addEventListener('click', iniciaJogo);
